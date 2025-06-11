@@ -30,6 +30,8 @@ namespace ConsoleApp
             Console.WriteLine();
 
             root.FindPayment(80);
+
+            root.PrintTree();
         }
     }
 }

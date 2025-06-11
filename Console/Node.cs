@@ -136,5 +136,63 @@ namespace ConsoleApp
 
             return false;
         }
+
+        public void PrintTree()
+        {
+            if (this == null)
+            {
+                Console.WriteLine("Дерево пустое");
+                return;
+            }
+            if (LeftNode != null || RightNode != null)
+            {
+                Console.Write($"{Employee.Payment} {Employee.Name} (");
+                if (LeftNode == null)
+                {
+                    Console.Write($"-");
+                }
+                else
+                {
+                    PrintTree(LeftNode);
+                }
+                Console.Write($", ");
+                if (RightNode == null)
+                {
+                    Console.Write($"-");
+                }
+                else
+                {
+                    PrintTree(RightNode);
+                }
+                Console.Write($")");
+            }
+            else Console.Write($"{Employee.Payment} {Employee.Name}");
+        }
+        private void PrintTree(Node node)
+        {
+            if (node.LeftNode != null || node.RightNode != null)
+            {
+                Console.Write($"{node.Employee.Payment} {node.Employee.Name} (");
+                if (node.LeftNode == null)
+                {
+                    Console.Write($"-");
+                }
+                else
+                {
+                    PrintTree(node.LeftNode);
+                }
+                Console.Write($", ");
+                if (node.RightNode == null)
+                {
+                    Console.Write($"-");
+                }
+                else
+                {
+                    PrintTree(node.RightNode);
+                }
+                Console.Write($")");
+            }
+            else Console.Write($"{node.Employee.Payment} {node.Employee.Name}");
+        }
     }
 }
