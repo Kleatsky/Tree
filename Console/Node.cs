@@ -89,7 +89,7 @@ namespace ConsoleApp
         {
             bool isFinded = FindPaymentBinary(payment);
 
-            if(!isFinded)
+            if (!isFinded)
             {
                 Console.WriteLine("такой сотрудник не найден");
             }

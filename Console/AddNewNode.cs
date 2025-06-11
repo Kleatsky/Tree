@@ -18,7 +18,7 @@ namespace ConsoleApp
             Console.WriteLine("Enter employee's payment:");
             string payment = Console.ReadLine();
 
-            if(!int.TryParse(payment, out int paymentInt))
+            if (!int.TryParse(payment, out int paymentInt))
             {
                 throw new Exception("Invalid payment input!");
             }
