@@ -70,29 +70,6 @@ namespace ConsoleApp
                 }
             }
         }
-
-        public static void PrintTree(Node node, string indent = "", bool isLast = true)
-        {
-            if (node != null)
-            {
-                Console.Write(indent);
-                if (isLast)
-                {
-                    Console.Write("└──");
-                    indent += "   ";
-                }
-                else
-                {
-                    Console.Write("├──");
-                    indent += "│  ";
-                }
-
-                Console.WriteLine($"{node.Employee.Payment} ({node.Employee.Name})");
-
-                PrintTree(node.LeftNode, indent, false);
-                PrintTree(node.RightNode, indent, true);
-            }
-        }
         public void ShowOrdered()
         {
             if (LeftNode != null)

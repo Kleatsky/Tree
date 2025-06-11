@@ -7,12 +7,12 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             //Tests
-            Tests.Run();
+            //Tests.Run();
 
-            //ConsoleInteraction.Interation();
+            ConsoleInteraction.Interation();
 
 
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("\nProgram complite.");
         }
     }
 }
